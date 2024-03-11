@@ -3,28 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <title>Travel</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <a href = "#main" id="skip">Skip to Main Content</a>
-    <header>
         <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li><a href = "pets.html">Pets</a></li>
-                <li><a href = "recipes.html">Recipes</a></li>
-                <li class = "active"><a href = "travel.html">Travel</a></li>
+            <ul id ="main_nav">
+                <li class ="head"> 
+                    <a href = "index.html">Home</a>
+                </li>
+                <li class = "head">
+                    <a href = "pets.html">Pets</a>
+                </li>
+                <li class ="current head">
+                    <a href = "travel.html">Travel</a>
+                    <button class = "accordion">expand</button>
+                    <div class = "panel">
+                        <ul class = "column_list">
+                            <li><a href = "#seattle"> Seattle</a></li>
+                            <li><a href = "#newyorkcity"> New York City</a></li>
+                            <li><a href = "#chiangmaithailand">ChiangMai</a></li>
+
+                        </ul>
+                    </div>
+                </li>
+        
+            <li class = "head">
+                <a href = "recipes.html">Recipes</a>
+            </li>
             </ul>
         </nav>
 
-    </header>
+
     <main id="main">
         <h1>Travel</h1>
-        <div>
+        <div id="seattle">
             <h2>Seattle</h2>
-            <img src="images/seattle.gif" width = "400" alt="Gif of seattle and the words 'seattle washington'." class = "center">
-            <img src="images/seattle_main.jpg" width = "400" alt="Landscape picture of the city encapsulating seattle needle tower at night. " class = "center">
+            <div class = "main_container"> 
+                <img src="images/seattle.gif" width = "400" alt="Gif of seattle and the words 'seattle washington'." class = "center">
+                <img src="images/seattle_main.jpg" width = "400" alt="Landscape picture of the city encapsulating seattle needle tower at night. " class = "center">
+            </div> 
 
             <h3>Geographical Location: North America</h3>
 
@@ -44,11 +64,14 @@
             <h4>Mt. Rainer</h4>
             <img src="images/mount_rainer.jpg"  width ="400" alt="Portrait photo of New York City." class = "center">
             <p> Mount Rainier is a majestic stratovolcano towering over the Pacific Northwest, known for its year-round snow-capped peak and breathtaking alpine landscapes. </p>
+            </div>
 
-
-            <h2>New York City </h2>
+            <div id="seattle">
+                <h2>New York City </h2>
+                <div class = "main_container"> 
             <img src="images/nyc.gif" width = "400" alt="Gif of different images switches back and forth with 'New York' written in the middle of the screen." class = "center">
             <img src="images/nyc_buildings.jpg" width = "400" alt="Landscape picture of the city of paris during the day time, with effiel tower in the far back. " class = "center">
+                </div>
 
             <h3>Geographical Location: North America</h3>
 
@@ -68,12 +91,14 @@
             <h4>Central Park</h4>
             <img src="images/central_park.jpg"  width ="400" alt="A landscape picture of a park with people and buildings and trees in the back." class = "center">
             <p> Central Park is a sprawling urban oasis in the heart of Manhattan, offering a serene escape from the city's hustle and bustle with its lush greenery, scenic waterways, and diverse recreational opportunities. </p>
+            </div>
 
-
-            <h2>Chiangmai, Thailand</h2>
+            <div id ="chiangmai"> 
+                <h2>Chiangmai, Thailand</h2>
+                <div class = "main_container"
             <img src="images/chiangmaigif.gif" width = "400" alt="GIF of lanterns filling and floating in the night sky." class = "center" >
             <img src="images/chiangmai.jpeg" width = "400" alt="Landscape of Chiangmai city with pastures, water,  and mountains in the background. " class = "center">
-
+                </div>
             <h3>Geographical Location: Asia</h3>
 
             <p> Chiang Mai, nestled in the lush hills of northern Thailand, is a city that captivates with its unique blend of cultural richness and natural beauty. Situated approximately 700 kilometers north of Bangkok, Chiang Mai is the largest city in the region and serves as the capital of the province of the same name. Its geographical location is nothing short of enchanting, surrounded by forested mountains and picturesque landscapes. This charming city, often referred to as the "Rose of the North," offers visitors a delightful escape from the bustling urban life, inviting them to explore a realm where tradition meets modernity amidst a backdrop of stunning scenery.</p> 
@@ -100,6 +125,7 @@
             <h4>Food</h4>
             <img src="images/chiangmai5.jpeg"  width ="400" alt="Several bowls and dishes filled with food with utensils stuck in them." class = "center">
             <p> Chaingmai also offers and has a variety of delicious Thai food, that is an absolute must to try if you visit. </p>
+            </div>
 
 
 
@@ -111,6 +137,31 @@
         <div></div>
         <div></div>
     </main>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+
+        const columnList = document.querySelector(".column-list");
+        const listItems = columnList.querySelectorAll("li");
+        const columnCount = Math.ceil(listItems.length);
+
+        columnList.style.columnCount = columnCount;
+
+
+    </script>
     
 </body>
 </html>

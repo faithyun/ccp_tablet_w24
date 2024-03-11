@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
     <title>Pets</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,11 +11,31 @@
     <a href = "#main" id="skip">Skip to Main Content</a>
     <header>
         <nav>
-            <ul>
-                <li><a href = "index.html">Home</a></li>
-                <li class = "active"><a href = "pets.html">Pets</a></li>
-                <li><a href = "recipes.html">Recipes</a></li>
-                <li><a href = "travel.html">Travel</a></li>
+            <ul id="main_nav">
+                <li class="head">
+                    <a href="index.html">Home</a>
+                  </li>
+                <li class="current head">
+                    <a href="pets.html">Pets</a>
+                    <button class="accordion">expand</button>
+                    <div class="panel">
+                        <ul class="column_list">
+                            <li><a href ="#bacon">Bacon</a></li>
+                            <li><a href ="#rocket">Rocket</a></li>
+                            <li><a href ="#juno">Juno</a></li>
+                            <li><a href ="#miumiu">Miumiu</a></li>
+                            <li><a href ="#pluto">Pluto</a></li>
+                        </ul>
+                        
+                    </div>
+                
+                </li>
+                <li class="head">
+                    <a href="travel.html">Travel</a>
+                </li>
+                <li class="head">
+                    <a href="recipes.html">Recipes</a>
+                </li>
             </ul>
         </nav>
 
@@ -53,13 +74,13 @@
             </P>
             <h2>Photo Gallery</h2>
             <div class = "photogallerygrid">
-                <img src="images/rocket_dinner.jpg" width ="200" alt = "Rocket is eating his dinner">
-                <img src="images/rocket_wants_to_go_out.jpg" width ="200" alt="Rocket wants to come out of the plyapen">
+                <a target = "_blank" href ="images/rocket_dinner.jpg"><img src="images/rocket_dinner.jpg" width ="200" alt = "Rocket is eating his dinner"></a>
+                <a target = "_blank" href = "images/rocket_wants_to_go_out.jpg"><img src="images/rocket_wants_to_go_out.jpg" width ="200" alt="Rocket wants to come out of the plyapen"></a>
                 <video width="200"  controls>
                     <source src="images/rocket_kitchen_clip.mp4">
                     Your browser does not support the video tag.  Rocket is trying to hunt the kitchen clip.
                 </video>
-                <img src="images/rocket_childhood.jpg"  width ="200" alt="Rocket in his childhood.">
+                <a target = "_blank" href = "images/rocket_childhood.jpg"><img src="images/rocket_childhood.jpg"  width ="200" alt="Rocket in his childhood."></a>
             </div>
 
             <h3>Likes</h3>
@@ -77,11 +98,10 @@
             </P>
             <h2>Photo Gallery</h2>
             <div class = "photogallerygrid">
-                <img src="images/juno_pup.JPG" width ="200" alt = "A young black and brown dog with his tongue hanging out">
-                <img src="images/juno_laying.JPG" width ="200" alt="A black and brown dog laying on a rug.">
-                <img src="images/juno_profile.JPG" width = "200" alt = "A profile perspective of a black and brown dog from shoulder up">
-                <img src="images/juno_laying_2.JPG"  width ="200" alt="A black and brown dog laying on a wood floor.">
-            </div>
+                <a target = "_blank" href= "images/juno_pup.JPG"><img src="images/juno_pup.JPG" width ="200" alt = "A young black and brown dog with his tongue hanging out"></a>
+                <a target = "_blank" href="images/juno_laying.JPG"><img src="images/juno_laying.JPG" width ="200" alt="A black and brown dog laying on a rug."></a>
+                <a target = "_blank" href="images/juno_profile.JPG"><img src="images/juno_profile.JPG" width = "200" alt = "A profile perspective of a black and brown dog from shoulder up"></a>
+                <a target = "_blank" href="images/juno_laying_2.JPG"><img src="images/juno_laying_2.JPG"  width ="200" alt="A black and brown dog laying on a wood floor."></a>
             <h3>Likes</h3>
             <ul>
                 <li>Human Food</li>
@@ -97,10 +117,10 @@
             </P>
             <h2>Photo Gallery</h2>
             <div class = "photogallerygrid">
-                <img src="images/miumiu_in_the_bag.jpeg" width ="200" alt = "Sulver gradient British shorthair cat in a pink bag.">
-                <img src="images/miumiu_on_the_bed.jpeg" width ="200" alt="Silver gradient British shorthair cat lyin on the bed.">
-                <img src="images/miumiu_sleeping.jpeg" width = "200" alt = "silver gradient British shorthair cat sleeping on the bed.">
-                <img src="images/miumiu_under_sunshine.jpeg"  width ="200" alt="Silver gradient British shorthair gradient British shorthair cat under the sunshine.">
+                <a target = "_blank" href = "images/miumiu_in_the_bag.jpeg"><img src="images/miumiu_in_the_bag.jpeg" width ="200" alt = "Sulver gradient British shorthair cat in a pink bag."></a> 
+                <a target = "_blank" href = "images/miumiu_on_the_bed.jpeg"><img src="images/miumiu_on_the_bed.jpeg" width ="200" alt="Silver gradient British shorthair cat lyin on the bed."></a>
+                <a target = "_blank" href ="images/miumiu_sleeping.jpeg"><img src="images/miumiu_sleeping.jpeg" width = "200" alt = "silver gradient British shorthair cat sleeping on the bed."></a> 
+                <a target = "_blank" href = "images/miumiu_under_sunshine.jpeg"><img src="images/miumiu_under_sunshine.jpeg"  width ="200" alt="Silver gradient British shorthair gradient British shorthair cat under the sunshine."> </a>
             </div>
             <h3>Likes</h3>
             <ul>
@@ -117,10 +137,10 @@
             </P>
             <h2>Photo Gallery</h2> 
             <div class = "photogallerygrid">
-                <img src="images/pluto_cookie.JPG" width ="200" alt = "Pluto the dog standing up to eat a cookie">
-                <img src="images/pluto_sleeping.jpg" width ="200" alt="Pluto sleeping on bed.">
-                <img src="images/pluto_walk.jpg" width = "200" alt = "Pluto the dog on a walking trail.">
-                <img src="images/pluto_sitting.jpg"  width ="200" alt="Pluto sitting and posed on top of a table.">
+                <a target = "_blank" href = "images/pluto_cookie.JPG"> <img src="images/pluto_cookie.JPG" width ="200" alt = "Pluto the dog standing up to eat a cookie"></a>
+                <a target = "_blank" href = "images/pluto_sleeping.jpg"> <img src="images/pluto_sleeping.jpg" width ="200" alt="Pluto sleeping on bed."></a>
+                <a target = "_blank" href = "images/pluto_walk.jpg"><img src="images/pluto_walk.jpg" width = "200" alt = "Pluto the dog on a walking trail."></a>
+                <a target = "_blank" href =images/pluto_sitting.jpg"><img src="images/pluto_sitting.jpg"  width ="200" alt="Pluto sitting and posed on top of a table."></a>  
             </div>
             <h3>Likes</h3>
             <ul>
@@ -139,6 +159,32 @@
         <div></div>
         <div></div>
     </main>
+
+    
+    <script>
+    
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+
+        const columnList = document.querySelector(".column-list");
+        const listItems = columnList.querySelectorAll("li");
+        const columnCount = Math.ceil(listItems.length);
+
+        columnList.style.columnCount = columnCount;
+
+    </script>
     
 </body>
 </html>
